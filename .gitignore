@@ -1,0 +1,75 @@
+# ──────────────────────────────────────────────────────────────
+# AI / agent artifacts (Claude Code, Cursor, Copilot, Aider, etc.)
+# ──────────────────────────────────────────────────────────────
+.claude/
+.claude-*/
+CLAUDE.md
+AGENTS.md
+GEMINI.md
+.cursor/
+.cursorrules
+.cursorignore
+.aider*
+.windsurfrules
+.continue/
+.codeium/
+.github/copilot-*
+.superpowers/
+docs/superpowers/
+docs/
+.planning/
+.plans/
+.agent/
+.agents/
+.ai/
+
+# ──────────────────────────────────────────────────────────────
+# Node.js / TypeScript
+# ──────────────────────────────────────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+dist/
+build/
+out/
+*.tsbuildinfo
+.eslintcache
+
+# ──────────────────────────────────────────────────────────────
+# Serverless Framework / AWS
+# ──────────────────────────────────────────────────────────────
+.serverless/
+.esbuild/
+.webpack/
+.dynamodb/
+.aws-sam/
+
+# ──────────────────────────────────────────────────────────────
+# Environment / secrets
+# ──────────────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ──────────────────────────────────────────────────────────────
+# Test / coverage
+# ──────────────────────────────────────────────────────────────
+coverage/
+.nyc_output/
+*.lcov
+
+# ──────────────────────────────────────────────────────────────
+# Editors / OS
+# ──────────────────────────────────────────────────────────────
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
