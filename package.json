@@ -1,12 +1,30 @@
 {
   "name": "task-processing",
   "version": "1.0.0",
-  "description": "",
+  "description": "Async Task Processor — serverless AWS application",
   "license": "ISC",
-  "author": "",
-  "type": "module",
-  "main": "index.js",
+  "author": "Sando <metatronishe@gmail.com>",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "serverless deploy",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.145",
+    "@types/node": "^20.12.7",
+    "aws-sdk-client-mock": "^4.0.1",
+    "esbuild": "^0.20.2",
+    "serverless": "^3.38.0",
+    "serverless-esbuild": "^1.52.1",
+    "typescript": "^5.4.5",
+    "vitest": "^1.5.0"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.575.0",
+    "@aws-sdk/client-sqs": "^3.575.0",
+    "@aws-sdk/lib-dynamodb": "^3.575.0",
+    "zod": "^3.23.4"
   }
 }
