@@ -57,6 +57,23 @@ functions:
           method: GET
           path: /tasks/{taskId}
 
+  processTask:
+    handler: src/handlers/processTask.handler
+    reservedConcurrency: 5
+    environment:
+      TASKS_TABLE: !Ref TasksTable
+      TASKS_QUEUE_URL: !Ref TasksQueue
+      TASKS_DLQ_URL: !Ref TasksDlq
+    iamRoleStatements:
+      - Effect: Allow
+        Action:
+          - dynamodb:UpdateItem
+        Resource: !GetAtt TasksTable.Arn
+    events:
+      - sqs:
+          arn: !GetAtt TasksQueue.Arn
+          batchSize: 1
+
 resources:
   Resources:
     TasksTable:
