@@ -9,13 +9,16 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.145",
     "@types/node": "^20.12.7",
     "aws-sdk-client-mock": "^4.0.1",
     "esbuild": "^0.20.2",
+    "eslint": "^9.39.4",
+    "neostandard": "^0.13.0",
     "serverless": "^3.38.0",
     "serverless-esbuild": "^1.52.1",
     "typescript": "^5.4.5",
