@@ -30,7 +30,7 @@ resources:
         AttributeDefinitions:
           - AttributeName: taskId
             AttributeType: S
-          - AttributeName: status
+          - AttributeName: taskStatus
             AttributeType: S
           - AttributeName: updatedAt
             AttributeType: S
@@ -38,9 +38,9 @@ resources:
           - AttributeName: taskId
             KeyType: HASH
         GlobalSecondaryIndexes:
-          - IndexName: status-updatedAt-index
+          - IndexName: taskStatus-updatedAt-index
             KeySchema:
-              - AttributeName: status
+              - AttributeName: taskStatus
                 KeyType: HASH
               - AttributeName: updatedAt
                 KeyType: RANGE

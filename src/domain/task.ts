@@ -14,7 +14,7 @@ export interface ErrorHistoryEntry {
 
 export interface Task {
   taskId: string
-  status: TaskStatus
+  taskStatus: TaskStatus
   payload: Record<string, unknown>
   attempts: number
   lastError?: string
