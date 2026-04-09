@@ -41,6 +41,22 @@ functions:
           method: POST
           path: /tasks
 
+  getTask:
+    handler: src/handlers/getTask.handler
+    environment:
+      TASKS_TABLE: !Ref TasksTable
+      TASKS_QUEUE_URL: !Ref TasksQueue
+      TASKS_DLQ_URL: !Ref TasksDlq
+    iamRoleStatements:
+      - Effect: Allow
+        Action:
+          - dynamodb:GetItem
+        Resource: !GetAtt TasksTable.Arn
+    events:
+      - httpApi:
+          method: GET
+          path: /tasks/{taskId}
+
 resources:
   Resources:
     TasksTable:
